@@ -134,18 +134,53 @@ const Navbar = () => {
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
                 <button
+                  key={link.name}
                   onClick={() => {
                     setIsMobileMenuOpen(false);
-                    scrollToSection("quote");
+                    if (link.type === "route") {
+                      navigate(link.path);
+                    } else {
+                      scrollToSection(link.id);
+                    }
                   }}
-                  className="w-full bg-[#0D3B66] text-white py-3 rounded font-bold flex justify-center items-center gap-2"
+                  className="block w-full text-left text-gray-800 font-medium hover:text-[#1171BA]"
                 >
-                  Begin Strategy <ChevronRightIcon />
+                  {link.name}
                 </button>
               ))}
-              <button className="w-full bg-[#0D3B66] text-white py-3 rounded font-bold flex justify-center items-center gap-2">
-                Begin Strategy <ChevronRightIcon />
+
+              {/* CTA Button */}
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  scrollToSection("quote");
+                }}
+                className="w-full bg-[#0D3B66] text-white py-3 rounded font-bold flex justify-center items-center gap-2"
+              >
+                Get Quote <ChevronRightIcon />
               </button>
+
+              {user ? (
+                <button
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    navigate("/dashboard");
+                  }}
+                  className="w-full border-2 border-[#1171BA] text-[#1171BA] py-3 rounded font-bold"
+                >
+                  Track Shipment
+                </button>
+              ) : (
+                <button
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    navigate("/login");
+                  }}
+                  className="w-full border-2 border-[#1171BA] text-[#1171BA] py-3 rounded font-bold"
+                >
+                  Signup / Login
+                </button>
+              )}
             </div>
           </motion.div>
         )}
