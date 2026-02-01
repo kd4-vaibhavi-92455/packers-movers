@@ -67,7 +67,6 @@ const Footer = () => {
               </a>
             ))}
           </div>
-
         </div>
 
         {/* QUICK LINKS */}
@@ -77,21 +76,59 @@ const Footer = () => {
             <span className="block w-8 h-[2px] bg-gray-400 mt-2"></span>
           </h3>
           <ul className="space-y-3 text-sm text-black-1000">
-            {/* <li className="cursor-pointer transition-colors duration-300 hover:text-blue-600">About Us</li> */}
-            {/* <li className="cursor-pointer transition-colors duration-300 hover:text-blue-600">Our Services</li> */}
             <li>
-              <a href="#services" className="cursor-pointer transition-colors duration-300 hover:text-blue-600">
+              <a
+                href="#services"
+                className="cursor-pointer transition-colors duration-300 hover:text-blue-600"
+              >
                 Our Services
-            </a>
+              </a>
             </li>
             <li>
-              <a href="#contact" className="cursor-pointer transition-colors duration-300 hover:text-blue-600">
+              <a
+                href="#contact"
+                className="cursor-pointer transition-colors duration-300 hover:text-blue-600"
+              >
                 Get In Touch
-    </a>
+              </a>
             </li>
-            {/* <li className="cursor-pointer transition-colors duration-300 hover:text-blue-600">Get In Touch</li> */}
-            {/* <li>Pay Now</li>
-            <li>FAQ</li> */}
+
+            <li>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert("Coming soon...");
+                }}
+                className=" 
+                cursor-pointer 
+                text-blue 
+                font-bold 
+                inline-flex 
+                items-center 
+                hover:text-[#1171ba] "
+              >
+                Admin Login
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  alert("Coming soon...");
+                }}
+                className=" 
+                cursor-pointer 
+                text-blue 
+                font-bold 
+                inline-flex 
+                items-center 
+                hover:text-[#1171ba] "
+              >
+                Register as a Driver
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -105,17 +142,6 @@ const Footer = () => {
             <li>Home</li>
             <li>Office</li>
             <li>Vehicle</li>
-            <li>
-              <a href="#" onClick={(e) => { e.preventDefault(); alert("Coming soon..."); }}
-                className=" 
-                cursor-pointer 
-                text-blue 
-                font-bold 
-                inline-flex 
-                items-center 
-                hover:text-[#1171ba] " > Register as a Driver </a>
-
-            </li>
           </ul>
         </div>
 
@@ -142,9 +168,10 @@ const Footer = () => {
 
       {/* COPYRIGHT */}
       <div className="border-t border-black/20 py-6 text-center text-sm text-black-1000">
-        Copyright © 2026 Packers-Movers. All rights reserved. | Privacy Policy | Terms & Conditions
+        Copyright © 2026 Packers-Movers. All rights reserved. | Privacy Policy |
+        Terms & Conditions
       </div>
-    </footer >
+    </footer>
   );
 };
 

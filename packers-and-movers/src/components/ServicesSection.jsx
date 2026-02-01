@@ -9,7 +9,7 @@ const servicesData = [
     title: "Workspace Swift",
     badge: "COMMERCIAL MOVERS",
     description: "Extreme attention to detail is the essence of Boo’s unique.",
-    image: "/images/services/office-relocation.png",
+    image: "images/services/office-relocation.png",
     icon: HomeWorkOutlinedIcon,
   },
   {
@@ -17,7 +17,7 @@ const servicesData = [
     title: "SafeTransit Auto",
     badge: "LOCAL MOVING",
     description: "Extreme attention to detail is the essence of Boo’s unique.",
-    image: "/images/services/vehicle.webp",
+    image: "images/services/vehicle.webp",
     icon: ApartmentOutlinedIcon,
   },
   {
@@ -25,7 +25,7 @@ const servicesData = [
     title: "Residential Moves",
     badge: "RESIDENTIAL MOVING",
     description: "Extreme attention to detail is the essence of Boo’s unique.",
-    image: "/images/services/house-shifting.png",
+    image: "images/services/house-shifting.png",
     icon: LocalShippingOutlinedIcon,
   },
 ];

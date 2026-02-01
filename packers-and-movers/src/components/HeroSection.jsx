@@ -1,3 +1,5 @@
+import { FiChevronDown } from "react-icons/fi";
+
 const scrollToQuoteForm = () => {
   const element = document.getElementById("quote");
   if (element) {
@@ -7,10 +9,50 @@ const scrollToQuoteForm = () => {
 
 const HeroSection = () => {
   return (
-    <div className="relative h-[600px] w-full">
+    <div className="relative h-[650px] w-full">
       <img
         src="images/hero-img.png"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover hidden md:block"
+        alt="hero-section-image"
+      />
+      {/* <img
+        src="images/hero-img.png"
+        className="absolute bottom-4 left-0.5  h-[100px] w-[100px] object-cover hidden md:block"
+        alt="hero-section-image"
+      /> */}
+      {/* <img
+        src="images/hero-img.png"
+        alt="hero-section-image"
+        style={{
+          position: "absolute",
+          bottom: "50px", // bottom-4
+          left: "50%", // left-0.5 (2px)
+          height: "100px",
+          width: "100px",
+          objectFit: "cover",
+          zIndex: 5,
+        }}
+      /> */}
+
+      <div
+        onClick={scrollToQuoteForm}
+        style={{
+          width: "40px",
+          height: "40px",
+          borderRadius: "25px",
+          border: "2px solid #1171BA",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        className="group absolute bottom-[-28px] left-1/2 -translate-x-1/2 hidden md:block transition-transform duration-300 ease-out group-hover:translate-y-1"
+      >
+        <FiChevronDown className="h-10 w-10 text-[#1171BA] transition-transform duration-300 ease-out group-hover:translate-y-1" />
+      </div>
+
+      <img
+        src="images/hero-img-mobile.png"
+        className="absolute inset-0 h-full w-full object-cover block md:hidden"
         alt="hero-section-image"
       />
 
@@ -30,8 +72,10 @@ const HeroSection = () => {
           combine precision handling with absolute reliability…
         </p>
 
-        <button onClick={scrollToQuoteForm}
-          className="mt-8 w-fit rounded-lg bg-[#1171BA] px-6 py-3 font-semibold text-white shadow-professional hover:bg-[#0A3D7A] transition">
+        <button
+          onClick={scrollToQuoteForm}
+          className="mt-8 w-fit rounded-lg bg-[#1171BA] px-6 py-3 font-semibold text-white shadow-professional hover:bg-[#0A3D7A] transition"
+        >
           Get a Free Quote now
         </button>
       </div>

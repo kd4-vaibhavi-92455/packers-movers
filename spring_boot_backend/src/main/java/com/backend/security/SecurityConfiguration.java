@@ -106,7 +106,12 @@ public class SecurityConfiguration {
 	    CorsConfiguration config = new CorsConfiguration();
 
 //	    config.setAllowedOrigins(List.of("http://localhost:5173"));
-	    config.setAllowedOrigins(List.of("https://kd4-vaibhavi-92455.github.io/project/"));
+//	    config.setAllowedOrigins(List.of("https://kd4-vaibhavi-92455.github.io/project/"));
+	    
+	    config.setAllowedOrigins(List.of(
+	            "http://localhost:5173",
+	            "https://kd4-vaibhavi-92455.github.io/project/"
+	        ));
 	    
 	    config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 	    config.setAllowedHeaders(List.of("*"));

@@ -17,7 +17,7 @@ import {
 import { styled } from "@mui/material/styles";
 import DownloadIcon from "@mui/icons-material/Download";
 import CloseIcon from "@mui/icons-material/Close";
-import generateInvoicePDF from './GenerateInvoicePdf';
+import generateInvoicePDF from "./GenerateInvoicePdf";
 
 // ===== STATIC DISTANCE & PRICING CONFIG =====
 
@@ -73,8 +73,6 @@ const STATE_CITY_MAP = {
   Maharashtra: ["Pune", "Mumbai", "Nagpur"],
   "Madhya Pradesh": ["Bhopal", "Indore"],
 };
-
-
 
 /* ===============================
    COMMON INPUT STYLES (UNCHANGED)
@@ -195,7 +193,7 @@ const QuoteForm = () => {
 
     if (!pickupCity || !dropCity || !serviceCategory) return null;
 
-    // ❌ Same city not allowed
+    // Same city not allowed
     if (pickupCity === dropCity) {
       alert("Same city moves are not available right now.");
       return null;
@@ -208,7 +206,6 @@ const QuoteForm = () => {
         alert("Pickup and Drop pincode cannot be same.");
         return null;
       }
-
     }
 
     const distance =
@@ -230,7 +227,6 @@ const QuoteForm = () => {
       handling,
       total,
     };
-
   };
 
   const handleSubmit = (e) => {
@@ -336,7 +332,11 @@ const QuoteForm = () => {
             <TextField
               label="Pickup Pincode"
               name="pickupPincode"
-              inputProps={{ maxLength: 6, inputMode: "numeric", pattern: "[0-9]*" }}
+              inputProps={{
+                maxLength: 6,
+                inputMode: "numeric",
+                pattern: "[0-9]*",
+              }}
               value={formData.pickupPincode}
               onChange={handleChange}
               error={!!pincodeError}
@@ -350,7 +350,6 @@ const QuoteForm = () => {
               name="pickupAddressLine"
               value={formData.pickupAddressLine}
               onChange={handleChange}
-
               sx={{ ...commonInputSx, mb: 3 }}
             />
           </FormRow>
@@ -402,7 +401,11 @@ const QuoteForm = () => {
             <TextField
               label="Drop Pincode"
               name="dropPincode"
-              inputProps={{ maxLength: 6, inputMode: "numeric", pattern: "[0-9]*" }}
+              inputProps={{
+                maxLength: 6,
+                inputMode: "numeric",
+                pattern: "[0-9]*",
+              }}
               value={formData.dropPincode}
               onChange={handleChange}
               error={!!pincodeError}
@@ -437,10 +440,10 @@ const QuoteForm = () => {
             />
           </ImageBox>
         </ImageContainer>
-      </MainContainer >
+      </MainContainer>
 
       {/* ================= INVOICE DIALOG ================= */}
-      < Dialog
+      <Dialog
         open={open}
         onClose={() => setOpen(false)}
         maxWidth="sm"
@@ -510,10 +513,9 @@ const QuoteForm = () => {
               </Typography>
               <Typography fontSize={14}>
                 <strong>Distance:</strong> {invoice.distance} km
-    </Typography>
+              </Typography>
             </Box>
           )}
-
 
           {/* COST TABLE */}
           {invoice && (
@@ -549,7 +551,7 @@ const QuoteForm = () => {
             </>
           )}
         </DialogContent>
-      </Dialog >
+      </Dialog>
     </>
   );
 };

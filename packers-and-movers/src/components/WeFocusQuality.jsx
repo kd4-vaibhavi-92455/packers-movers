@@ -1,68 +1,74 @@
 import React from "react";
-// Import the *Outlined* variants of the MUI icons
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import WarehouseOutlinedIcon from "@mui/icons-material/WarehouseOutlined";
-import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined";
+
+const features = [
+  {
+    id: 1,
+    label: "Transparent Pricing",
+    Icon: GppGoodOutlinedIcon,
+  },
+  {
+    id: 2,
+    label: "Fast, Efficient Delivery",
+    Icon: LocalShippingOutlinedIcon,
+  },
+  {
+    id: 3,
+    label: "Warehouse Storage",
+    Icon: WarehouseOutlinedIcon,
+  },
+];
 
 const WeFocusQuality = () => {
   return (
-    <div className="px-46 pt-20 pb-50 relative min-h-[450px] bg-gray-900">
-      {/* Background Image Container */}
+    <section className="relative bg-gray-900 py-16 md:py-24 md:pb-64">
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-        style={{ backgroundImage: "url('/images/we-focus-quality.png')" }}
-      ></div>
+        style={{ backgroundImage: "url('images/we-focus-quality.png')" }}
+      />
 
-      {/* Content Overlay Container - Added flex-wrap and gap-8 */}
-      <div className="relative z-10 flex flex-wrap items-center justify-between h-full gap-8 p-4 sm:p-8">
-        {/* Left Text Content Wrapper (now takes up available space, allows wrapping) */}
-        <div className="text-white max-w-lg w-[50%]">
-          <p className="text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-2">
-            FOCUSED ON QUALITY
-          </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">
-            Global Logistics Partner To World's Famous Brands
-          </h1>
-          <p className="text-xl sm:text-2xl font-bold text-yellow-400">
-            From Over 25 Years!
-          </p>
-        </div>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Left Content */}
+          <div className="text-white text-center lg:text-left max-w-xl 2xl:pb-10.5">
+            <p className="text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-3">
+              Focused on Quality
+            </p>
 
-        {/* Right Icons/Buttons Area - Changed to flex-row and flex-wrap for horizontal wrap */}
-        <div className="flex flex-wrap w-[50%] justify-center gap-6 text-yellow-400 mt-8 md:mt-0">
-          {/* Feature 1: Transparent Pricing */}
-          <div className="flex flex-col items-center text-center w-[140px]">
-            <div className="mb-2">
-              <GppGoodOutlinedIcon sx={{ fontSize: 70 }} />
-            </div>
-            <p className="text-xs uppercase tracking-wider font-medium mt-1.5 text-white">
-              TRANSPARENT PRICING
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+              Global Logistics Partner To World’s Famous Brands
+            </h2>
+
+            <p className="text-xl sm:text-2xl font-bold text-yellow-400">
+              From Over 25 Years!
             </p>
           </div>
 
-          {/* Feature 2: Fast, Efficient Delivery */}
-          <div className="flex flex-col items-center text-center w-[140px]">
-            <div className="mb-2">
-              <LocalShippingOutlinedIcon sx={{ fontSize: 70 }} />
-            </div>
-            <p className="text-xs uppercase tracking-wider font-medium mt-1.5 text-white">
-              FAST, EFFICIENT DELIVERY
-            </p>
-          </div>
+          {/* Right Icons */}
+          <div className="flex flex-wrap justify-center gap-10">
+            {features?.map(({ id, Icon, label }) => (
+              <div
+                key={id}
+                className="flex flex-col items-center text-center w-[130px] group"
+              >
+                <Icon
+                  sx={{ fontSize: 64 }}
+                  className="text-yellow-400 mb-3 transition-transform duration-300 group-hover:-translate-y-1"
+                />
 
-          {/* Feature 3: Warehouse Storage */}
-          <div className="flex flex-col items-center text-center w-[140px]">
-            <div className="mb-2">
-              <WarehouseOutlinedIcon sx={{ fontSize: 70 }} />
-            </div>
-            <p className="text-xs uppercase tracking-wider font-medium mt-1.5 text-white">
-              WAREHOUSE STORAGE
-            </p>
+                <p className="text-xs uppercase tracking-wider text-white font-medium">
+                  {label}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
