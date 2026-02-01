@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, TextField, Button, Typography } from "@mui/material";
-import { useNavigate } from "react-router";
+import { Navigate, useNavigate } from "react-router";
 import { signinUser } from "../../services/auth";
 import { useAuth } from "../../providers/AuthProvider";
 import { successAlert } from "../../utils/swalAlerts";
@@ -90,7 +90,7 @@ const Login = () => {
             LOGIN now
           </Button>
         </form>
-        <div className="text-center mt-6">
+        {/* <div className="text-center mt-6">
           <Typography color="text.secondary">
             Click{" "}
             <a className="text-blue-600" href="/signup">
@@ -98,6 +98,17 @@ const Login = () => {
             </a>{" "}
             if new user
           </Typography>
+        </div> */}
+        <div className="text-center mt-6">
+          <Button
+            fullWidth
+            type="button"
+            sx={{ mt: 2, py: 1.4, fontWeight: "bold" }}
+            variant="contained"
+            onClick={() => navigate("/signup")}
+          >
+            Signup
+          </Button>
         </div>
       </Box>
     </div>
