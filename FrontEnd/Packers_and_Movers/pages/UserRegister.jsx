@@ -55,28 +55,26 @@ const UserRegister = () => {
   };
 
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (validate()) {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
+    if (validate()) {
+      const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    users.push({
-      name: form.name,
-      email: form.email,
-      mobile: form.mobile,
-      password: form.password,
-    });
+      users.push({
+        name: form.name,
+        email: form.email,
+        mobile: form.mobile,
+        password: form.password,
+      });
 
-    localStorage.setItem("users", JSON.stringify(users));
+      localStorage.setItem("users", JSON.stringify(users));
 
-    alert("Registered Successfully");
+      alert("Registered Successfully");
 
-    // Redirect to Login page
-    navigate("/login");
-  }
-};
-
-
+      // Redirect to Login page
+      navigate("/login");
+    }
+  };
 
   return (
     <>
@@ -143,7 +141,8 @@ const UserRegister = () => {
           </div>
 
           <p className="login-link">
-            Already registered ? <a href="/login">Login Here</a>
+            Already registered ?<Link to="/login">Login</Link>
+            {/* <a href="/login">Login Here</a> */}
           </p>
         </form>
       </div>
