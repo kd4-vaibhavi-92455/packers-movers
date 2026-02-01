@@ -53,14 +53,7 @@ const MovingProceduresUI = () => {
       </Box>
 
       {/* Cards */}
-      <Grid
-        container
-        sx={{
-          width: "100%",
-          justifyContent: "center",
-          gap: "25px",
-        }}
-      >
+      <Grid container spacing={3} justifyContent={"center"}>
         {steps.map((item, index) => {
           const Icon = iconMap[item.icon];
 
@@ -74,8 +67,7 @@ const MovingProceduresUI = () => {
                   border border-[#E5E7EB]
                   transition-all duration-300
                   hover:bg-[#1171BA]
-                  hover:text-white
-                  w-[370px]
+                  hover:text-white 
                 "
                 sx={{
                   minHeight: "260px",
