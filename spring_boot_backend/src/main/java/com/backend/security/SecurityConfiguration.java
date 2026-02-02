@@ -34,22 +34,9 @@ public class SecurityConfiguration {
 	private final PasswordEncoder passwordEncoder;
 	private final CustomJwtVerificationFilter jwtFilter;
 
-	/*
-	 * Configure Spring sec filter chain as a spring bean (@Bean) , to override the
-	 * spring sec defaults - Disable CSRF protection - Disable HttpSession - Disable
-	 * login / logout page generation (i.e disable form login) - retain Basic
-	 * Authentication scheme. - Add authorization rules - swagger , sign in , sign
-	 * up , listing doctors.. - public end points - any other request - authenticate
-	 * Add HttpSecurity as the dependency - to build sec filter chain
-	 */
-	
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 	    log.info("******** Configuring Packers and Movers Security with Driver, Helper, Manager roles *******");
-
-	    // CSRF aur Session management ko stateless (JWT) set karna
-//	    http.csrf(csrf -> csrf.disable())
-//	        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
 	    http
 	    .cors(Customizer.withDefaults())   // ⭐⭐⭐ THIS LINE FIXES BROWSER ISSUE
@@ -101,32 +88,18 @@ public class SecurityConfiguration {
 		return config.getAuthenticationManager();
 	}
 	
-//	@Bean
-//	public CorsConfigurationSource corsConfigurationSource() {
-//	    CorsConfiguration config = new CorsConfiguration();
-//	    config.setAllowedOrigins(List.of(
-//	            "http://localhost:5173",
-//	            "https://kd4-vaibhavi-92455.github.io/project/",
-//	            "https://kd4-vaibhavi-92455.github.io/"
-//	        ));
-//	    
-//	    config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-//	    config.setAllowedHeaders(List.of("*"));
-//	    config.setAllowCredentials(true);
-//
-//	    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//	    source.registerCorsConfiguration("/**", config);
-//	    return source;
-//	}
+
 	
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {
 	    CorsConfiguration config = new CorsConfiguration();
-	    config.setAllowedOrigins(List.of(
-	        "http://localhost:5173",
-	        "https://kd4-vaibhavi-92455.github.io",
-	        "https://kd4-vaibhavi-92455.github.io/project"
-	    ));
+
+	    config.setAllowedOriginPatterns(List.of(
+	            "http://localhost:*",
+	            "https://kd4-vaibhavi-92455.github.io"
+	        ));
+
+	    
 	    config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
 	    config.setAllowedHeaders(List.of("*"));
 	    config.setAllowCredentials(true);

@@ -12,7 +12,8 @@ import com.backend.services.AdminService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@CrossOrigin(origins = "https://kd4-vaibhavi-92455.github.io")
+//@CrossOrigin(origins = "http://localhost:5174")
+//@CrossOrigin(origins = "https://kd4-vaibhavi-92455.github.io")
 @RequestMapping("/api/admin")
 @RequiredArgsConstructor
 @PreAuthorize("hasRole('ADMIN')") // 🔒 ADMIN only

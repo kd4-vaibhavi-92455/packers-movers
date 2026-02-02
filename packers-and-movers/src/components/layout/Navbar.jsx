@@ -46,11 +46,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex-shrink-0">
-            <span
-              className={`text-2xl font-bold transition-colors ${
-                isScrolled ? "text-[#0D3B66]" : "text-white"
-              }`}
-            >
+            <span className="text-2xl font-bold transition-colors text-white">
               <img src="images/logo.png" width="100px" />
               {/* LOGI<span className="text-[#1171BA]">MOVE</span> */}
             </span>
