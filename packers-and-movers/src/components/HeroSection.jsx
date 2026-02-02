@@ -60,7 +60,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-brand-primary/70" />
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-12 md:px-24 text-[#1171BA] max-w-3xl">
+      <div className="relative z-10 h-full flex flex-col justify-center max-sm:justify-start max-sm:pt-[135px] px-12 md:px-24 text-[#1171BA] max-w-3xl">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight jost">
           Intelligent Logistics.
           <br />

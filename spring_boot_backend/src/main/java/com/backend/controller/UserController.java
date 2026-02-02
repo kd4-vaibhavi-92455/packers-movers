@@ -27,6 +27,7 @@ import com.backend.services.UserService;
 import lombok.RequiredArgsConstructor;
 
 //@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://kd4-vaibhavi-92455.github.io")
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
