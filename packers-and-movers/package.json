@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kd4-vaibhavi-92455.github.io/project",
-
+  "homepage": "https://kd4-vaibhavi-92455.github.io/packers-movers",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
