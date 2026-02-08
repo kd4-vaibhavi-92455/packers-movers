@@ -82,7 +82,7 @@ const customers = [
 const DashboardContent = () => {
   return (
     <Box
-      sx={{ background: "#f4f6f8", p: 3, minHeight: "100vh", width: "100%" }}
+      sx={{ background: "#f4f6f8", pt: 1, minHeight: "100vh", width: "100%" }}
     >
       <Typography variant="h5" mb={3} fontWeight="bold">
         Admin Dashboard

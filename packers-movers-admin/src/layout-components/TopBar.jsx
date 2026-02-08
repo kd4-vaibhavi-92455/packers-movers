@@ -1,20 +1,16 @@
-const TopBar = ({ color = "25, 118, 210" }) => {
+const TopBar = () => {
   return (
     <div
       style={{
-        "--bar-color": color,
         position: "fixed",
         top: 0,
-        left: 260,
+        left: "260px",
         right: 0,
-        height: "56px",
-        background: `
-          linear-gradient(
-            to bottom,
-            rgba(var(--bar-color), 1),
-            rgba(var(--bar-color), 0.4)
-          )
-        `,
+        height: "40px",
+        backgroundColor: "#0E3B65",
+        borderBottom: " solid 2px #0E3B65",
+        // background:
+        // "linear-gradient(to bottom, rgba(17,113,186,1), rgba(17,113,186,0.4))",
         display: "flex",
         alignItems: "center",
         padding: "0 16px",
@@ -22,7 +18,7 @@ const TopBar = ({ color = "25, 118, 210" }) => {
         zIndex: 1000,
       }}
     >
-      Topbar
+      <strong>SMOOVE PACKERS AND MOVERS</strong>
     </div>
   );
 };

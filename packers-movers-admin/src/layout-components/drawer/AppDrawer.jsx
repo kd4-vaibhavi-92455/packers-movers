@@ -33,7 +33,6 @@ const AppDrawer = ({ mobileOpen, onToggleDrawer }) => {
           "& .MuiDrawer-paper": { width: drawerWidth },
         }}
       >
-        <Toolbar />
         {drawerContent}
       </MuiDrawer>
     </Box>

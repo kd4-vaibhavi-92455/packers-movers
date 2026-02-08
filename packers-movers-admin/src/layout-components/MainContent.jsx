@@ -24,7 +24,7 @@ const MainContent = () => {
         overflowX: "hidden",
       }}
     >
-      <Toolbar />
+      {/* <Toolbar /> */}
       <Routes>
         <Route path="/dashboard" element={<DashboardContent />} />
         {/* <Route path="/bookings" element={<BookingReport />} />

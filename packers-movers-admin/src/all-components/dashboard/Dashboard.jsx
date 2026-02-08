@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box } from "@mui/material";
 import MainContent from "../../layout-components/MainContent";
 import AppDrawer from "../../layout-components/drawer/AppDrawer";
-import TopBar from "../../layout-components/TopBar";
+import TopBar from "../../layout-components/Topbar";
 
 const Dashboard = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
