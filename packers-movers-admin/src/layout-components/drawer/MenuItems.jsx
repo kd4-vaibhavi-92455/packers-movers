@@ -42,11 +42,11 @@ const MenuItems = () => {
           <ListItemIcon>
             <Dashboard />
           </ListItemIcon>
-          <ListItemText primary="go to Dashboard" />
+          <ListItemText primary="Dashboard" />
         </ListItemButton>
 
         {/* Bookings */}
-        <ListItemButton
+        {/* <ListItemButton
           onClick={() =>
             setOpen((prev) => ({ ...prev, bookings: !prev.bookings }))
           }
@@ -66,10 +66,10 @@ const MenuItems = () => {
               <ListItemText primary="Add Booking" />
             </ListItemButton>
           </List>
-        </Collapse>
+        </Collapse> */}
 
         {/* Customers */}
-        <ListItemButton
+        {/* <ListItemButton
           onClick={() =>
             setOpen((prev) => ({ ...prev, customers: !prev.customers }))
           }
@@ -82,17 +82,14 @@ const MenuItems = () => {
         </ListItemButton>
         <Collapse in={open.customers} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            {/* <ListItemButton sx={{ pl: 4 }} component={Link} to="/customers">
-            <ListItemText primary="All Customers" />
-          </ListItemButton> */}
             <ListItemButton sx={{ pl: 4 }} component={Link} to="/customers">
               <ListItemText primary="Customers" />
             </ListItemButton>
           </List>
-        </Collapse>
+        </Collapse> */}
 
         {/* Drivers */}
-        <ListItemButton
+        {/* <ListItemButton
           onClick={() =>
             setOpen((prev) => ({ ...prev, drivers: !prev.drivers }))
           }
@@ -108,14 +105,11 @@ const MenuItems = () => {
             <ListItemButton sx={{ pl: 4 }} component={Link} to="/drivers">
               <ListItemText primary="All Drivers" />
             </ListItemButton>
-            {/* <ListItemButton sx={{ pl: 4 }} component={Link} to="/add-driver">
-            <ListItemText primary="Add Driver" />
-          </ListItemButton> */}
           </List>
-        </Collapse>
+        </Collapse> */}
 
         {/* Vehicles */}
-        <ListItemButton
+        {/* <ListItemButton
           onClick={() =>
             setOpen((prev) => ({ ...prev, vehicles: !prev.vehicles }))
           }
@@ -131,14 +125,11 @@ const MenuItems = () => {
             <ListItemButton sx={{ pl: 4 }} component={Link} to="/vehicles">
               <ListItemText primary="All Vehicles" />
             </ListItemButton>
-            {/* <ListItemButton sx={{ pl: 4 }} component={Link} to="/add-vehicle">
-            <ListItemText primary="Add Vehicle" />
-          </ListItemButton> */}
           </List>
-        </Collapse>
+        </Collapse> */}
 
         {/* Payments */}
-        <ListItemButton
+        {/* <ListItemButton
           onClick={() =>
             setOpen((prev) => ({ ...prev, payments: !prev.payments }))
           }
@@ -158,26 +149,26 @@ const MenuItems = () => {
               <ListItemText primary="Add Payment" />
             </ListItemButton>
           </List>
-        </Collapse>
+        </Collapse> */}
 
         {/* Reports */}
-        <ListItemButton component={Link} to="/reports">
+        {/* <ListItemButton component={Link} to="/reports">
           <ListItemIcon>
             <BarChart />
           </ListItemIcon>
           <ListItemText primary="Reports" />
-        </ListItemButton>
+        </ListItemButton> */}
 
         {/* Notifications */}
-        <ListItemButton component={Link} to="/notifications">
+        {/* <ListItemButton component={Link} to="/notifications">
           <ListItemIcon>
             <Notifications />
           </ListItemIcon>
           <ListItemText primary="Notifications" />
-        </ListItemButton>
+        </ListItemButton> */}
 
         {/* Settings */}
-        <ListItemButton
+        {/* <ListItemButton
           onClick={() =>
             setOpen((prev) => ({ ...prev, settings: !prev.settings }))
           }
@@ -200,7 +191,7 @@ const MenuItems = () => {
               <ListItemText primary="System Settings" />
             </ListItemButton>
           </List>
-        </Collapse>
+        </Collapse> */}
       </List>
     </>
   );

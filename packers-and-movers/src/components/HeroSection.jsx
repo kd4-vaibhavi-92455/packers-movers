@@ -67,9 +67,14 @@ const HeroSection = () => {
           Stable Transitions.
         </h1>
 
-        <p className="mt-4 text-base md:text-lg text-[#0D3B66] font-display">
+        {/* hidden on mobile, visible on md */}
+        <p className="mt-4 text-base md:text-lg text-[#0D3B66] font-display hidden md:block">
           More than just a move - it’s a strategically planned relocation. We
           combine precision handling with absolute reliability…
+        </p>
+        {/* hidden from small tabs */}
+        <p className="mt-4 text-base md:text-lg text-[#0D3B66] font-display block md:hidden">
+          More than just a move
         </p>
 
         <button
