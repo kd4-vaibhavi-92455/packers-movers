@@ -74,7 +74,8 @@ const HeroSection = () => {
         </p>
         {/* hidden from small tabs */}
         <p className="mt-4 text-base md:text-lg text-[#0D3B66] font-display block md:hidden">
-          More than just a move
+          More than just a move - We combine precision handling with absolute
+          reliability.
         </p>
 
         <button
